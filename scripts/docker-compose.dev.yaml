@@ -30,6 +30,7 @@ services:
     tmpfs: /work/node_modules/:exec # To avoid pnpm ERR_PNPM_LINKING_FAILED error
     volumes:
       - ./../web:/work
+      - ./../proto:/work/proto
 
   # Services below are used for developers to run once
   #
@@ -72,3 +73,4 @@ services:
     entrypoint: "npm"
     volumes:
       - ./../web:/work
+      - ./../proto:/work/proto
